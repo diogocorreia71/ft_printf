@@ -6,7 +6,7 @@
 #    By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/17 13:15:35 by diodos-s          #+#    #+#              #
-#    Updated: 2023/05/02 08:54:10 by diodos-s         ###   ########.fr        #
+#    Updated: 2023/05/03 09:14:53 by diodos-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS = ${SRC:.c=.o}
 OBJSB = ${SRCB:.c=.o}
 HEADER = libft.h
 INCLUDE = -I include
-CC = gcc
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 .c.o:

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:30:40 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/05/02 16:07:50 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/05/03 11:46:47 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <libft/libft.h>
+# include "libft/libft.h"
 
-int	ft_printchar(char *c);
+int	ft_printchar(char c);
 int	ft_printstr(char *s);
 int	ft_printpercent(void);
 int	ft_print_hex(unsigned int num, const char format);

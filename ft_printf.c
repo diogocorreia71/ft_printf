@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:56:43 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/05/02 16:06:40 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/05/03 11:45:15 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_formats(va_list args, const char format)
 {
@@ -46,10 +45,13 @@ int	ft_printf(const char *format, ...)
 	va_start(arg, format);
 	while (format[i])
 	{
-		if (format[i] != '%')
-			print_len += ft_printchar(format[i]);
+		if (format[i] == '%')
+		{
+			print_len += ft_formats(arg, format[i + 1]);
+			i++;
+		}
 		else
-			print_len += ft_formats(arg, format[++i]);
+			print_len += ft_printchar(format[i]);
 		i++;
 	}
 	va_end(arg);

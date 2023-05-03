@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printstd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diodos-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:38:22 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/05/02 16:09:53 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/05/03 11:45:02 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printchar(char *c)
+int	ft_printchar(char c)
 {
 	return (write(1, &c, 1));
 }
